@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deck the Pixels 2026 • Nano Banana Holiday Sweater Studio &amp; 5-Layer Photoshop PSD</title>
+  <meta name="description" content="Google Deck the Pixels Hackathon Showcase: Custom Nano Banana Ugly Holiday Sweater, Consistent 3D Developer Avatar Cabin Portrait, Interactive 5-Layer Photoshop (.PSD) Inspector, and 45s 1080p Video." />
+  <style>
+    :root {
+      --bg: #081511;
+      --bg-elev: #0f241d;
+      --bg-card: #132d24;
+      --border: #285243;
+      --gold: #f5c85c;
+      --gold-soft: #fae29c;
+      --mint: #4ade80;
+      --berry: #ef4444;
+      --text: #f8f5ec;
+      --muted: #b0c7bc;
+      --radius: 18px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background:
+        radial-gradient(circle at 18% 0%, rgba(245, 200, 92, 0.14), transparent 36%),
+        radial-gradient(circle at 85% 8%, rgba(239, 68, 68, 0.12), transparent 34%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1220px; margin: 0 auto; padding: 0 24px; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(14px);
+      background: rgba(8, 21, 17, 0.88);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.06rem;
+    }
+    .brand-star {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 12px var(--gold);
+    }
+    .pill {
+      font-size: 0.74rem;
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(245, 200, 92, 0.45);
+      background: rgba(245, 200, 92, 0.12);
+      color: var(--gold);
+      font-weight: 700;
+    }
+    .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-weight: 750;
+      font-size: 0.92rem;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), #e4ac32);
+      color: #102019;
+      box-shadow: 0 6px 22px rgba(245, 200, 92, 0.25);
+    }
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .hero { padding: 54px 0 34px; }
+    .eyebrow {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.82rem;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .hero h1 {
+      font-size: clamp(2.1rem, 4.3vw, 3.35rem);
+      line-height: 1.12;
+      font-weight: 850;
+      max-width: 920px;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero p {
+      color: var(--muted);
+      font-size: 1.06rem;
+      max-width: 800px;
+      margin-bottom: 24px;
+    }
+
+    .section { padding: 28px 0; }
+    .section-head { margin-bottom: 20px; }
+    .section-head h2 { font-size: 1.65rem; font-weight: 800; }
+    .section-head p { color: var(--muted); font-size: 0.96rem; margin-top: 4px; }
+
+    /* 3-Step Progression Cards */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 22px;
+    }
+    .step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .step-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-bottom: 1px solid var(--border);
+      background: #0b1b15;
+    }
+    .step-card img.square-fit {
+      object-fit: contain;
+      padding: 16px;
+      background: #dcdfe2;
+    }
+    .step-body { padding: 20px; flex: 1; display: flex; flex-direction: column; gap: 8px; }
+    .step-num {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.78rem;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .step-body h3 { font-size: 1.2rem; }
+    .step-body p { color: var(--muted); font-size: 0.92rem; }
+
+    /* Interactive 5-Layer PSD Studio */
+    .studio-grid {
+      display: grid;
+      grid-template-columns: minmax(320px, 470px) 1fr;
+      gap: 26px;
+      align-items: start;
+    }
+    @media (max-width: 860px) {
+      .studio-grid { grid-template-columns: 1fr; }
+    }
+    .psd-stage-wrap {
+      background: var(--bg-card);
+      border: 2px solid var(--gold);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    .psd-stage {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 896 / 1200;
+      border-radius: 12px;
+      overflow: hidden;
+      background-image:
+        linear-gradient(45deg, #1b352c 25%, transparent 25%),
+        linear-gradient(-45deg, #1b352c 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, #1b352c 75%),
+        linear-gradient(-45deg, transparent 75%, #1b352c 75%);
+      background-size: 24px 24px;
+      background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+      background-color: #12261f;
+    }
+    .psd-layer-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: opacity 0.22s ease;
+    }
+    .psd-controls {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+    }
+    .layer-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 13px 16px;
+      border-radius: 12px;
+      background: var(--bg-elev);
+      border: 1px solid var(--border);
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .layer-item:hover { border-color: var(--gold); }
+    .layer-left { display: flex; align-items: center; gap: 12px; }
+    .layer-left input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--gold);
+      cursor: pointer;
+    }
+    .layer-name {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .layer-desc { font-size: 0.82rem; color: var(--muted); }
+    .preset-bar { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0 20px; }
+
+    .video-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px;
+    }
+    video { width: 100%; border-radius: 12px; display: block; background: #000; }
+
+    footer {
+      margin-top: 48px;
+      border-top: 1px solid var(--border);
+      padding: 30px 0 46px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-bar">
+      <div class="brand">
+        <span class="brand-star"></span>
+        <span>Deck the Pixels 2026</span>
+        <span class="pill">NANO BANANA × PHOTOSHOP .PSD</span>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-outline" href="#psd-inspector">Interactive 5-Layer Inspector</a>
+        <a class="btn btn-gold" href="assets/deck_the_pixels_holiday_card.psd" download>
+          Download Multi-Layer .PSD &darr;
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="eyebrow">Google Nano Banana + Adobe Photoshop Holiday Studio</span>
+      <h1>From Tactile <span>Nano Banana Knitwear</span> to a 5-Layer Holiday Card</h1>
+      <p>
+        Created for Google's <strong>Deck the Pixels</strong> challenge: we synthesized a macro-knitted Fair Isle <em>"DECK THE PIXELS"</em> ugly holiday sweater with Nano Banana, dressed our 3D developer avatar in the exact garment inside a cozy snow-lit cabin, and engineered a spec-compliant 5-layer Adobe Photoshop <code>.psd</code> holiday card.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-gold" href="assets/deck_the_pixels_holiday_card.psd" download>
+          Download 5-Layer Photoshop File (.PSD) &darr;
+        </a>
+        <a class="btn btn-outline" href="https://github.com/jeffrey-graham/deck-the-pixels-nano-banana" target="_blank" rel="noopener">
+          View Source &amp; PSD Builder on GitHub
+        </a>
+      </div>
+    </section>
+
+    <!-- 3-Step Visual Progression -->
+    <section class="section">
+      <div class="section-head">
+        <h2>Three-Stage Creative Pipeline</h2>
+        <p>Preserving pixel-art motifs, wool stitch geometry, and 3D pom-poms from flatlay synthesis through final multi-layer compositing.</p>
+      </div>
+
+      <div class="steps-grid">
+        <article class="step-card">
+          <img class="square-fit" src="assets/ugly_holiday_sweater.jpg" alt="Step 1: Nano Banana Ugly Holiday Sweater Flatlay" />
+          <div class="step-body">
+            <span class="step-num">Step 01 • Garment Synthesis</span>
+            <h3>Nano Banana Ugly Holiday Sweater</h3>
+            <p>
+              1024×1024 studio flatlay generated with Google Nano Banana: royal blue &amp; cream wool knit featuring <em>"DECK THE PIXELS"</em> chest lettering, Santa-hat pixel bananas, reindeer, green PCB traces, tactile 3D pom-poms, and metallic tinsel.
+            </p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <img src="assets/developer_avatar_holiday_card.jpg" alt="Step 2: Developer Avatar Wearing the Nano Banana Sweater" />
+          <div class="step-body">
+            <span class="step-num">Step 02 • Character Integration</span>
+            <h3>Avatar Wearing the Exact Sweater</h3>
+            <p>
+              Multi-modal character &amp; garment consistency: our 3D coder avatar wears the identical knitted Nano Banana sweater inside a warm winter developer cabin complete with code monitor, glowing fireplace stockings, and hot cocoa.
+            </p>
+          </div>
+        </article>
+
+        <article class="step-card">
+          <img src="assets/final_holiday_card.png" alt="Step 3: Finished 5-Layer Photoshop Holiday Card" />
+          <div class="step-body">
+            <span class="step-num">Step 03 • Photoshop Multi-Layer Card</span>
+            <h3>Finished 5-Layer Holiday Card (.PSD)</h3>
+            <p>
+              Assembled into a genuine Adobe Photoshop v1 (<code>8BPS</code>) binary file with 5 distinct RGBA layers, gold-trimmed evergreen pixel-banana holly border, and editable serif holiday typography.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Interactive 5-Layer PSD Inspector -->
+    <section class="section" id="psd-inspector">
+      <div class="section-head">
+        <h2>Interactive 5-Layer Photoshop (.PSD) Inspector</h2>
+        <p>Toggle each of the 5 named RGBA layers live in your browser — try hiding Layer 03 to reveal the aligned Step 1 Sweater Flatlay underneath!</p>
+      </div>
+
+      <div class="studio-grid">
+        <div class="psd-stage-wrap">
+          <div class="psd-stage">
+            <img id="lyr1" class="psd-layer-img" src="assets/layers/01_Winter_Cabin_Backdrop.png" alt="01_Winter_Cabin_Backdrop" />
+            <img id="lyr2" class="psd-layer-img" src="assets/layers/02_Nano_Banana_Sweater_Flatlay.png" alt="02_Nano_Banana_Sweater_Flatlay" />
+            <img id="lyr3" class="psd-layer-img" src="assets/layers/03_Avatar_Wearing_Sweater.png" alt="03_Avatar_Wearing_Sweater" />
+            <img id="lyr4" class="psd-layer-img" src="assets/layers/04_Pixel_Banana_Holly_Frame.png" alt="04_Pixel_Banana_Holly_Frame" />
+            <img id="lyr5" class="psd-layer-img" src="assets/layers/05_Holiday_Card_Typography.png" alt="05_Holiday_Card_Typography" />
+          </div>
+        </div>
+
+        <div class="psd-controls">
+          <h3 style="margin-bottom: 6px;">Photoshop Layer Stack (Top &rarr; Bottom)</h3>
+          <p style="font-size: 0.88rem; color: var(--muted);">
+            Matches the exact Pascal-string Layer Records inside <code>assets/deck_the_pixels_holiday_card.psd</code> (<code>896×1200</code>, 8-bit RGBA channels, Normal blend mode).
+          </p>
+
+          <div class="preset-bar">
+            <button type="button" class="btn btn-outline" style="padding: 7px 12px; font-size: 0.82rem;" id="presetAllBtn">Show All 5 Layers</button>
+            <button type="button" class="btn btn-outline" style="padding: 7px 12px; font-size: 0.82rem;" id="presetRevealSweaterBtn">Reveal Step 1 Flatlay (Hide Layer 03)</button>
+            <button type="button" class="btn btn-outline" style="padding: 7px 12px; font-size: 0.82rem;" id="presetFrameOnlyBtn">Inspect Frame &amp; Text Only</button>
+          </div>
+
+          <label class="layer-item">
+            <div class="layer-left">
+              <input type="checkbox" checked data-target="lyr5" />
+              <div>
+                <div class="layer-name">05_Holiday_Card_Typography</div>
+                <div class="layer-desc">Gold serif greeting ribbon &amp; removable Nano Banana × Photoshop studio stamp</div>
+              </div>
+            </div>
+            <span class="pill">TOP</span>
+          </label>
+
+          <label class="layer-item">
+            <div class="layer-left">
+              <input type="checkbox" checked data-target="lyr4" />
+              <div>
+                <div class="layer-name">04_Pixel_Banana_Holly_Frame</div>
+                <div class="layer-desc">Evergreen pine boughs, holly berries, pixel reindeer &amp; Santa-hat banana border</div>
+              </div>
+            </div>
+            <span class="pill">RGBA</span>
+          </label>
+
+          <label class="layer-item">
+            <div class="layer-left">
+              <input type="checkbox" checked data-target="lyr3" />
+              <div>
+                <div class="layer-name">03_Avatar_Wearing_Sweater</div>
+                <div class="layer-desc">3D developer avatar wearing the knitted Deck the Pixels sweater with hot cocoa</div>
+              </div>
+            </div>
+            <span class="pill">RGBA</span>
+          </label>
+
+          <label class="layer-item">
+            <div class="layer-left">
+              <input type="checkbox" checked data-target="lyr2" />
+              <div>
+                <div class="layer-name">02_Nano_Banana_Sweater_Flatlay</div>
+                <div class="layer-desc">Alpha-isolated Step 1 Ugly Holiday Sweater aligned beneath avatar torso</div>
+              </div>
+            </div>
+            <span class="pill">RGBA</span>
+          </label>
+
+          <label class="layer-item">
+            <div class="layer-left">
+              <input type="checkbox" checked data-target="lyr1" />
+              <div>
+                <div class="layer-name">01_Winter_Cabin_Backdrop</div>
+                <div class="layer-desc">Diffused snowy cabin interior backdrop stage (moonlit window, IDE &amp; fireplace)</div>
+              </div>
+            </div>
+            <span class="pill">BASE</span>
+          </label>
+
+          <div style="margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <a class="btn btn-gold" href="assets/deck_the_pixels_holiday_card.psd" download>
+              Download deck_the_pixels_holiday_card.psd (23.6 MB) &darr;
+            </a>
+            <a class="btn btn-outline" href="assets/final_holiday_card.png" download>
+              Download Merged PNG
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 45-Second Showcase Video -->
+    <section class="section">
+      <div class="section-head">
+        <h2>45-Second Studio Walkthrough (1080p HD)</h2>
+        <p>End-to-end breakdown of Step 1 Nano Banana sweater design, Step 2 avatar integration, and Step 3 multi-layer PSD architecture.</p>
+      </div>
+      <div class="video-box">
+        <video controls preload="metadata" poster="assets/final_holiday_card.png">
+          <source src="assets/deck_the_pixels_showcase.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video playback.
+        </video>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+      <div>
+        <strong style="color: var(--text);">Deck the Pixels 2026 • Nano Banana Holiday Studio</strong><br />
+        Built with Google Nano Banana image synthesis &amp; spec-compliant multi-layer Adobe Photoshop (<code>8BPS</code> v1) compositing.
+      </div>
+      <a class="btn btn-gold" href="assets/deck_the_pixels_holiday_card.psd" download>
+        Download .PSD File &darr;
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const checkboxes = document.querySelectorAll('input[type="checkbox"][data-target]');
+    function syncLayers() {
+      checkboxes.forEach(cb => {
+        const el = document.getElementById(cb.dataset.target);
+        if (el) el.style.opacity = cb.checked ? "1" : "0";
+      });
+    }
+    checkboxes.forEach(cb => cb.addEventListener("change", syncLayers));
+
+    function setCheckedMap(map) {
+      checkboxes.forEach(cb => {
+        cb.checked = Boolean(map[cb.dataset.target]);
+      });
+      syncLayers();
+    }
+
+    document.getElementById("presetAllBtn").addEventListener("click", () => {
+      setCheckedMap({ lyr1: true, lyr2: true, lyr3: true, lyr4: true, lyr5: true });
+    });
+    document.getElementById("presetRevealSweaterBtn").addEventListener("click", () => {
+      setCheckedMap({ lyr1: true, lyr2: true, lyr3: false, lyr4: true, lyr5: true });
+    });
+    document.getElementById("presetFrameOnlyBtn").addEventListener("click", () => {
+      setCheckedMap({ lyr1: false, lyr2: false, lyr3: false, lyr4: true, lyr5: true });
+    });
+  </script>
+</body>
+</html>
